@@ -3,9 +3,8 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# -----------------------------
-# Helper Function: Calculate Total, Average, and Grade
-# -----------------------------
+# --------- Helper Function: Calculate Total, Average, and Grade ----------
+
 def calculate_metrics(df):
     subjects = ['Math', 'Science', 'English', 'History', 'Computer']
 
@@ -20,9 +19,7 @@ def calculate_metrics(df):
 
     return df
 
-# -----------------------------
-# Helper Function: Grade Logic
-# -----------------------------
+# ----------------------------- Helper Function: Grade Logic -----------------------------
 def assign_grade(avg):
     if avg >= 90:
         return 'A'
@@ -33,9 +30,7 @@ def assign_grade(avg):
     else:
         return 'D'
 
-# -----------------------------
-# Plot: Subject-wise Average Marks (Bar Chart)
-# -----------------------------
+# ----------------------------- Plot: Subject-wise Average Marks (Bar Chart) -----------------------------
 def plot_subject_wise_avg(df):
     # Calculate average for each subject
     subject_avg = df[['Math', 'Science', 'English', 'History', 'Computer']].mean()
@@ -51,9 +46,7 @@ def plot_subject_wise_avg(df):
     # Display chart in Streamlit
     st.pyplot(fig)
 
-# -----------------------------
-# Plot: Grade Distribution (Pie Chart)
-# -----------------------------
+# ----------------------------- Plot: Grade Distribution (Pie Chart) -----------------------------
 def plot_grade_distribution(df):
     # Count how many students got each grade
     grade_counts = df['Grade'].value_counts()
@@ -66,9 +59,7 @@ def plot_grade_distribution(df):
     # Display chart in Streamlit
     st.pyplot(fig)
 
-# -----------------------------
-# Main Streamlit App
-# -----------------------------
+# ----------------------------- Main Streamlit App -----------------------------
 def main():
     # Set Streamlit page settings
     st.set_page_config(page_title="Student Performance Dashboard", layout="centered")
@@ -104,6 +95,6 @@ def main():
     with col2:
         plot_grade_distribution(df)
 
-# Run the app
+# ------------------ Run the app ------------------
 if __name__ == "__main__":
     main()
