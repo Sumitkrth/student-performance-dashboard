@@ -18,7 +18,7 @@ This is a Streamlit-based web application that analyzes student performance data
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - [Python 3.x](https://www.python.org/)
 - [Streamlit](https://streamlit.io/) – for web interface
@@ -27,7 +27,7 @@ This is a Streamlit-based web application that analyzes student performance data
 
 ---
 
-## 📂 File Structure
+## File Structure
 
 project/
 ├── app.py # Main Streamlit application
@@ -38,7 +38,7 @@ project/
 
 ---
 
-## ▶️ How to Run the Project
+## How to Run the Project
 
 1. **Clone the repository** or download the ZIP.
 
