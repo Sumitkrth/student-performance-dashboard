@@ -83,7 +83,7 @@ def main():
     # Show Topper
     topper = df.loc[df['Average'].idxmax()]
     st.subheader("🏆 Topper Highlight")
-    st.markdown(f"**{topper['Name']}** is the topper with an average score of **{topper['Average']:.2f}** and grade **{topper['Grade']}**.")
+    st.markdown(f"**{topper['StudentID']}, {topper['Name']}** is the topper with an average score of **{topper['Average']:.2f}** and grade **{topper['Grade']}**.")
 
     # Charts and Visualizations
     st.subheader("📈 Visualizations")
